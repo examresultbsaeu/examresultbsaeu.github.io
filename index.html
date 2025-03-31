@@ -1,4 +1,5 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
     <title>B.Ed. Web Result</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,71 +19,72 @@
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-        }h1 {
-        color: #1e88e5;
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-
-    label {
-        font-weight: bold;
-        text-align: left;
-        display: block;
-        margin: 8px 0 3px;
-    }
-
-    select, input {
-        width: 100%;
-        padding: 8px;
-        margin-top: 3px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-    }
-
-    button {
-        width: 100%;
-        background-color: #1e88e5;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-        margin-top: 10px;
-    }
-
-    button:hover {
-        background-color: #1565c0;
-    }
-
-    .result-container {
-        text-align: center;
-        margin-top: 15px;
-        font-size: 16px;
-        font-weight: bold;
-        color: red;
-    }
-
-    @media (max-width: 480px) {
-        .container {
-            width: 95%;
-            padding: 15px;
         }
+
         h1 {
-            font-size: 20px;
+            color: #1e88e5;
+            font-size: 22px;
+            margin-bottom: 15px;
         }
-        select, input {
-            font-size: 12px;
-            padding: 6px;
-        }
-        button {
-            font-size: 12px;
-            padding: 8px;
-        }
-    }
-</style>
 
+        label {
+            font-weight: bold;
+            text-align: left;
+            display: block;
+            margin: 8px 0 3px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 3px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #1e88e5;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        .result-container {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: red;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            select, input {
+                font-size: 12px;
+                padding: 6px;
+            }
+            button {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -92,44 +94,44 @@
             <select id="session" name="session">
                 <option value="">-Select-</option>
                 <option value="2023-25">(2023-25)</option>
-            </select><label for="semester">Semester:</label>
-        <select id="semester" name="semester">
-            <option value="">Choose Semester</option>
-            <option value="semester2">Semester 2</option>
-        </select>
+            </select>
+            
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester">
+                <option value="">Choose Semester</option>
+                <option value="semester2">Semester 2</option>
+            </select>
 
-        <label for="marksType">Marks Type:</label>
-        <select id="marksType" name="marksType">
-            <option value="">Select Exam Type</option>
-            <option value="regular">Regular</option>
-        </select>
+            <label for="marksType">Marks Type:</label>
+            <select id="marksType" name="marksType">
+                <option value="">Select Exam Type</option>
+                <option value="regular">Regular</option>
+            </select>
 
-        <label for="roll">Roll:</label>
-        <input type="text" id="roll" name="roll" placeholder="Enter Roll Number">
+            <label for="roll">Roll:</label>
+            <input type="text" id="roll" name="roll" placeholder="Enter Roll Number">
 
-        <label for="number">Number:</label>
-        <input type="text" id="number" name="number" placeholder="Enter Number">
+            <label for="number">Number:</label>
+            <input type="text" id="number" name="number" placeholder="Enter Number">
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit">Submit</button>
+        </form>
 
-    <div id="resultMessage" class="result-container"></div>
-</div>
+        <div id="resultMessage" class="result-container"></div>
+    </div>
 
-<script>
-    document.getElementById('resultForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        let resultMessage = document.getElementById('resultMessage');
-        resultMessage.textContent = "Exam Data Not Found";
-        setTimeout(() => {
-            resultMessage.textContent = "APRIL FOOL!";
-            resultMessage.style.color = "red";
-        }, 2000);
-    });
-</script>
-
+    <script>
+        document.getElementById('resultForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let resultMessage = document.getElementById('resultMessage');
+            setTimeout(() => {
+                resultMessage.textContent = "APRIL FOOL!";
+                resultMessage.style.color = "red";
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
