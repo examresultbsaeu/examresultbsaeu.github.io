@@ -1,0 +1,115 @@
+<!DOCTYPE html><html>
+<head>
+    <title>B.Ed. Web Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        .container {
+            width: 60%; /* Increased width for better appearance */
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }h1 {
+        color: #1e88e5;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        text-align: left;
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    select, input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        background-color: #1e88e5;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background-color: #1565c0;
+    }
+
+    .result-container {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: red;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>B.Ed. Web Result</h1>
+        <form id="resultForm">
+            <label for="session">Session:</label>
+            <select id="session" name="session">
+                <option value="">-Select-</option>
+                <option value="2023-25">(2023-25)</option>
+            </select><label for="semester">Semester:</label>
+        <select id="semester" name="semester">
+            <option value="">Choose Semester</option>
+            <option value="semester2">Semester 2</option>
+        </select>
+
+        <label for="marksType">Marks Type:</label>
+        <select id="marksType" name="marksType">
+            <option value="">Select Exam Type</option>
+            <option value="regular">Regular</option>
+        </select>
+
+        <label for="roll">Roll:</label>
+        <input type="text" id="roll" name="roll" placeholder="Enter Roll Number">
+
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" placeholder="Enter Number">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="resultMessage" class="result-container"></div>
+</div>
+
+<script>
+    document.getElementById('resultForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let resultMessage = document.getElementById('resultMessage');
+        resultMessage.textContent = "Supplementary: Course 9 2nd half (Theory)";
+        setTimeout(() => {
+        resultMessage.textContent = "April Fool!";
+            resultMessage.style.color = "green";
+        }, 2000);
+    });
+</script>
+
+</body>
+</html>
